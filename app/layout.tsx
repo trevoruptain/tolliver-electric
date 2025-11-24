@@ -22,6 +22,11 @@ export const metadata: Metadata = {
   description:
     "Trusted electrical contractors serving Kentucky, Indiana, Ohio, Tennessee, and West Virginia since 1987. Commercial & residential electrical services.",
   generator: "v0.app",
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
