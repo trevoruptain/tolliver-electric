@@ -1,3 +1,5 @@
+import { SiteFooter } from "@/components/site-footer";
+import { SiteHeader } from "@/components/site-header";
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import type React from "react";
@@ -32,8 +34,13 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${jetbrainsMono.variable} antialiased`}
     >
-      <body className="font-sans">
-        <Suspense fallback={null}>{children}</Suspense>
+      <body className="font-sans min-h-screen flex flex-col">
+        <SiteHeader />
+        <main className="flex-1">
+          <Suspense fallback={null}>{children}</Suspense>
+        </main>
+        <SiteFooter />
+        <script src="/hank-widget.js" defer></script>
       </body>
     </html>
   );
