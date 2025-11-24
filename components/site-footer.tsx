@@ -7,9 +7,48 @@ import {
   MapPin,
   Phone,
   Twitter,
-  Zap,
 } from "lucide-react";
 import Link from "next/link";
+
+function TolliverLogo() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 64 64"
+      className="h-10 w-10"
+    >
+      <defs>
+        <linearGradient id="footerLogoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style={{ stopColor: "#3B82F6", stopOpacity: 1 }} />
+          <stop
+            offset="100%"
+            style={{ stopColor: "#2563EB", stopOpacity: 1 }}
+          />
+        </linearGradient>
+      </defs>
+      {/* Background with rounded square */}
+      <rect
+        x="4"
+        y="4"
+        width="56"
+        height="56"
+        rx="12"
+        fill="url(#footerLogoGrad)"
+      />
+      {/* Stylized T letter - bold and modern */}
+      <path
+        d="M 32 16 L 32 48 M 18 24 L 46 24"
+        stroke="white"
+        strokeWidth="6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        fill="none"
+      />
+      {/* Small accent circle for electrical theme */}
+      <circle cx="32" cy="24" r="2" fill="white" />
+    </svg>
+  );
+}
 
 export function SiteFooter() {
   return (
@@ -19,9 +58,7 @@ export function SiteFooter() {
           {/* Brand Column */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="bg-primary/20 p-2 rounded-full">
-                <Zap className="h-6 w-6 text-primary fill-primary" />
-              </div>
+              <TolliverLogo />
               <div className="flex flex-col">
                 <span className="text-xl font-bold tracking-tight text-white">
                   TOLLIVER
@@ -235,5 +272,3 @@ export function SiteFooter() {
     </footer>
   );
 }
-
-

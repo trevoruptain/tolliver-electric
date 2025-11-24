@@ -7,11 +7,11 @@ export function HeroSection() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/electrical-worker-installing-wiring-in-commercial-.jpg"
-          alt="Background"
-          className="h-full w-full object-cover opacity-20"
+          src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?q=80&w=2070&auto=format&fit=crop"
+          alt="Industrial electrical panel and wiring"
+          className="h-full w-full object-cover opacity-30"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/80 via-slate-900/60 to-slate-900" />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/85 via-slate-900/70 to-slate-900" />
       </div>
 
       <div className="container relative z-10 mx-auto px-4 md:px-6">
@@ -76,6 +76,3 @@ export function HeroSection() {
     </section>
   );
 }
-
-
-
