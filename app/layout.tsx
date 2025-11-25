@@ -2,6 +2,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
+import Script from "next/script";
 import type React from "react";
 import { Suspense } from "react";
 import "./globals.css";
@@ -45,7 +46,15 @@ export default function RootLayout({
           <Suspense fallback={null}>{children}</Suspense>
         </main>
         <SiteFooter />
-        <script src="/hank-widget.js" defer></script>
+        <Script
+          src={
+            process.env.NODE_ENV === "development"
+              ? process.env.NEXT_PUBLIC_WIDGET_URL ||
+                "http://localhost:3000/hank-widget.js?id=2fc19c13f298435b"
+              : "https://app.dialhank.com/hank-widget.js?id=5d301605ec9b4747"
+          }
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
